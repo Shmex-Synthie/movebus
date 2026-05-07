@@ -9,7 +9,7 @@ import pyttsx3
 import threading
 import os
 
-API_KEY = "AIzaSyB-UbBIMoJgOa-CeYIN8bQbtWZmuBMHsA0"
+API_KEY = "chave"
 
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-3.1-flash-lite-preview")
