@@ -9,19 +9,19 @@ Fui instruído a não citar mais de uma linha por resposta a não ser que o usu�
 0207 - Canto do Rio Circular: Circular local que atende Canto do Rio e arredores retornando ao ponto inicial; ideal para deslocamentos internos do bairro, geralmente intervalos maiores que linhas troncais.
 0208 - Norte/Campus: Liga Terminal Norte à região do Campus Univille/UDESC, muito usada por estudantes; mais cheia nos horários de entrada e saída das aulas.
 0219 - Paraíso via Canto do Rio: Variante da linha Paraíso que passa por Canto do Rio antes do destino final; útil para bairros intermediários e costuma seguir grade de dias úteis.
-0230 - Emilio Landmann: Atende a região da Rua Emílio Landmann e bairros próximos a partir do Terminal Norte; linha de caráter mais local com saídas distribuídas durante o dia.
+0230 - Emilio Landmann: Atende a região da Rua Emílio Landmann e bairros próximos a partir do Terminal Iririú; linha de caráter mais local com saídas distribuídas durante o dia.
 0231 - Cohab: Liga Terminal Norte à Cohab/Aventureiro e áreas residenciais densas; bastante usada por moradores, especialmente cedo e no fim da tarde.
 0232 - Aventureiro Circular: Circular interna do bairro Aventureiro, cobrindo ruas residenciais e retornando ao eixo principal; boa para conexões locais e intervalos moderados.
 0234 - Cubatão: Atende região do Cubatão saindo do Terminal Norte, servindo áreas afastadas e corredores residenciais; costuma ter menos frequência que linhas centrais.
 0238 - Aventureiro Cohab via Emilio Landmann: Interliga Aventureiro e Cohab passando pela Emílio Landmann, cobrindo vários bairros numa só rota; indicada para deslocamentos sem precisar trocar de terminal.
 0240 - Aeroporto via Emilio Landmann: Conecta região norte ao Aeroporto Lauro Carneiro de Loyola passando pela Emílio Landmann; útil para trabalhadores e viagens, com grade mais específica.
 0241 - Centro/Campus: Sai do Centro para o Campus universitário, opção clássica para estudantes e servidores; maior demanda manhã, meio-dia e noite.
-0242 - Costa e Silva/Centro: Liga bairro Costa e Silva ao Centro, passando por eixo comercial importante; geralmente boa frequência em horários comerciais.
+0242 - Costa e Silva/Centro: Liga bairro Costa e Silva ao Centro, passando por eixo comercial e zonas residenciais; geralmente boa frequência em horários comerciais.
 0300 - Itaum/Centro: Atende o bairro Itaum até o Centro, servindo moradores da zona sul/oeste; linha tradicional com reforço nos horários de trabalho.
 0500 - Vila Nova/Centro: Conecta Vila Nova ao Centro passando por corredor oeste; muito usada por trabalhadores e estudantes, com saídas regulares ao longo do dia.
 0600 - Guanabara/Centro: Liga bairro Guanabara ao Centro por trajeto curto e urbano; costuma ter boa procura nos picos e fluxo constante em dias úteis.
 0700 - Sul/Centro: Linha troncal entre Terminal Sul e Centro, essencial para integração da zona sul; frequência normalmente alta e operação extensa.
 0800 - Iririú/Centro: Faz a ligação direta entre Iririú e Centro, atendendo uma das regiões mais populosas; costuma ser bastante movimentada durante todo o dia.
 2010 - Circular Centro: Circular que roda pela área central conectando comércio, serviços e pontos estratégicos sem necessidade de terminal; ideal para deslocamentos curtos no Centro.
-MEMÓRIA: O MoveBus é um assistente virtual disponível para tirar dúvidas sobre linhas de ônibus.
-MEMÓRIA: Para o seu trajeto, utilize a linha 0136 - Norte/Iririú, que conecta o Terminal Norte ao bairro passando pela Santos Dumont.
+[2026-05-21 13:33] MEMÓRIA: A linha 0800 Iririú/Centro é a ligação direta mais indicada entre Iririú e Centro
+[2026-05-21 16:01] MEMÓRIA: A linha 0136 Norte/Iririú conecta diretamente o bairro Iririú ao Terminal Norte
