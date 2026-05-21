@@ -12,7 +12,7 @@ import os
 import datetime
 
 # Configuração da API
-API_KEY = "SUA CHAVE AQUI"
+API_KEY = "sua_chave_vai_aqui"
 KNOWLEDGE_FILE = "knowledge.txt"
 AUDIO_FILE = "entrada.wav"
 
@@ -27,8 +27,8 @@ def _tts_worker() -> None:
     """Thread dedicada ao pyttsx3. Fica viva enquanto o programa roda."""
     eng = pyttsx3.init()
     eng.setProperty("voice", r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_PT-BR_MARIA_11.0')
-    eng.setProperty("rate", 175)
-    eng.setProperty("volume", 1.0)
+    eng.setProperty("rate", 250)
+    eng.setProperty("volume", 1.3)
     while True:
         texto = _tts_queue.get()        # bloqueia até ter algo na fila
         if texto is None:               # sinal de encerramento
@@ -83,7 +83,6 @@ horários, itinerários e dicas de mobilidade urbana.
 
 Regras:
 - Responda de forma clara, objetiva e amigável.
-- Use no máximo 3 frases para respostas simples.
 - Se não souber algo, diga honestamente e sugira onde buscar a informação.
 - Priorize as informações do contexto fornecido antes de usar conhecimento geral.
 """
@@ -110,26 +109,40 @@ Pergunta do usuário: {pergunta}
 # CAMADA DE ÁUDIO
 
 FS = 16000
-DURACAO = 5
 CANAIS = 1
 
 
 def gravar_audio() -> None:
     """
-    Grava áudio e salva como WAV 16-bit PCM.
-    O sounddevice grava em float32 por padrão; convertemos para int16
-    antes de escrever para garantir compatibilidade com SpeechRecognition.
+    Grava áudio continuamente até o usuário clicar novamente.
     """
-    adicionar_mensagem_sistema("Ouvindo por 5 segundos…")
 
-    # Gravação em float32
-    audio_f32 = sd.rec(
-        int(DURACAO * FS),
+    global _gravando
+
+    adicionar_mensagem_sistema("🎤 Gravando... clique novamente para parar.")
+
+    audio_frames = []
+
+    stream = sd.InputStream(
         samplerate=FS,
         channels=CANAIS,
         dtype="float32"
     )
-    sd.wait()
+
+    with stream:
+        while _gravando:
+            data, overflowed = stream.read(1024)
+
+            if overflowed:
+                print("Overflow detectado")
+
+            audio_frames.append(data.copy())
+
+    if not audio_frames:
+        return
+
+    audio_f32 = np.concatenate(audio_frames, axis=0)
+
     audio_i16 = np.clip(audio_f32, -1.0, 1.0)
     audio_i16 = (audio_i16 * 32767).astype(np.int16)
 
@@ -169,8 +182,7 @@ COR_USER     = "#60AFFF"   # azul claro (balão do usuário)
 COR_BOT      = "#7FFFB0"   # verde-menta (balão do bot)
 COR_SYS      = "#FFA07A"   # laranja suave (mensagens do sistema)
 
-_gravando = False           # flag para desabilitar botão durante gravação
-
+_gravando = False           
 
 def adicionar_mensagem_sistema(msg: str) -> None:
     """Insere uma linha de status no chat (thread-safe via after)."""
@@ -193,10 +205,27 @@ def exibir_mensagem(remetente: str, texto: str) -> None:
 
 def iniciar_voz() -> None:
     global _gravando
+
+    # Se já estiver gravando -> para
     if _gravando:
+        _gravando = False
+
+        btn_voz.configure(
+            text="⏳ Processando...",
+            bg="#444444",
+            state="disabled"
+        )
+
         return
+
+    # Se NÃO estiver gravando -> inicia
     _gravando = True
-    btn_voz.configure(state="disabled", text="Gravando…")
+
+    btn_voz.configure(
+        text="⏹ Parar Gravação",
+        bg="#CC3333"
+    )
+
     threading.Thread(target=_processar_voz, daemon=True).start()
 
 
@@ -218,8 +247,14 @@ def _processar_voz() -> None:
     except Exception as e:
         adicionar_mensagem_sistema(f"Erro: {e}")
     finally:
-        _gravando = False
-        janela.after(0, lambda: btn_voz.configure(state="normal", text="Perguntar por Voz"))
+        janela.after(
+        0,
+        lambda: btn_voz.configure(
+            state="normal",
+            text="🎤 Perguntar por Voz",
+            bg=COR_BTN_VOZ
+        )
+    )
 
 
 # Fluxo de texto

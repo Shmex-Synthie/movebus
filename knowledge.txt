@@ -1,20 +1,19 @@
-Fui instruído a não citar mais de uma linha por resposta a não ser que o usuário cite mais de uma diretamente.
 0040 - Tupy/Norte via Centro: Liga o Terminal Tupy ao Terminal Norte passando pelo Centro, útil para quem sai da zona industrial/Tupy rumo ao centro e região norte; costuma operar mais forte em dias úteis com saídas concentradas nos horários de pico manhã e fim da tarde.
 0041 - Norte/Centro: Uma das linhas troncais mais movimentadas, conecta Terminal Norte ao Terminal Central pela Blumenau/João Colin; alta frequência durante o dia, normalmente de 5 a 12 min em dias úteis e operação até tarde.
 0043 - Tupy/Centro: Faz a ligação direta entre Terminal Tupy e Centro, importante para trabalhadores e estudantes do eixo sul/leste; geralmente mais frequente nos picos de manhã, almoço e fim do expediente.
-0130 - Norte/Iririú/Tupy: Linha integradora entre Terminal Norte, região Iririú e Terminal Tupy, cruzando bairros populosos; costuma ter movimento constante nos dias úteis e reforço em horários de trabalho.
-0136 - Norte/Iririú: Conecta Terminal Norte ao Terminal Iririú/bairro Iririú, boa para deslocamentos entre zona norte e leste; normalmente roda o dia todo com intervalos médios e picos cedo/tarde.
+0130 - Norte/Iririú/Tupy: Linha integradora entre Terminal Norte, Terminal Iririú e Terminal Tupy, cruzando bairros populosos; costuma ter movimento constante nos dias úteis e reforço em horários de trabalho.
+0136 - Norte/Iririú: Conecta Terminal Norte ao Terminal Iririú, boa para deslocamentos entre zona norte e leste; normalmente roda o dia todo com intervalos médios e picos cedo/tarde.
 0200 - Norte/Sul: Linha estratégica entre Terminal Norte e Terminal Sul, cruzando grande parte da cidade; muito usada para integrações e costuma ter frequência elevada em dias úteis.
 0206 - Paraíso: Atende o bairro Paraíso saindo do Terminal Norte, passando por áreas residenciais e comerciais; horários comuns ao longo do dia com reforço manhã e retorno noturno.
-0207 - Canto do Rio Circular: Circular local que atende Canto do Rio e arredores retornando ao ponto inicial; ideal para deslocamentos internos do bairro, geralmente intervalos maiores que linhas troncais.
+0207 - Canto do Rio Circular: Circular local que atende Canto do Rio e arredores retornando ao ponto inicial; ideal para deslocamentos internos do bairro, geralmente intervalos maiores que linhas troncais. Sai do Terminal Norte.
 0208 - Norte/Campus: Liga Terminal Norte à região do Campus Univille/UDESC, muito usada por estudantes; mais cheia nos horários de entrada e saída das aulas.
-0219 - Paraíso via Canto do Rio: Variante da linha Paraíso que passa por Canto do Rio antes do destino final; útil para bairros intermediários e costuma seguir grade de dias úteis.
+0219 - Paraíso via Canto do Rio: Variante da linha Paraíso que passa por Canto do Rio antes do destino final; útil para bairros intermediários e costuma seguir grade de dias úteis. Sai do Terminal Norte.
 0230 - Emilio Landmann: Atende a região da Rua Emílio Landmann e bairros próximos a partir do Terminal Iririú; linha de caráter mais local com saídas distribuídas durante o dia.
-0231 - Cohab: Liga Terminal Norte à Cohab/Aventureiro e áreas residenciais densas; bastante usada por moradores, especialmente cedo e no fim da tarde.
-0232 - Aventureiro Circular: Circular interna do bairro Aventureiro, cobrindo ruas residenciais e retornando ao eixo principal; boa para conexões locais e intervalos moderados.
-0234 - Cubatão: Atende região do Cubatão saindo do Terminal Norte, servindo áreas afastadas e corredores residenciais; costuma ter menos frequência que linhas centrais.
-0238 - Aventureiro Cohab via Emilio Landmann: Interliga Aventureiro e Cohab passando pela Emílio Landmann, cobrindo vários bairros numa só rota; indicada para deslocamentos sem precisar trocar de terminal.
-0240 - Aeroporto via Emilio Landmann: Conecta região norte ao Aeroporto Lauro Carneiro de Loyola passando pela Emílio Landmann; útil para trabalhadores e viagens, com grade mais específica.
+0231 - Cohab: Liga Terminal Iririú à Cohab/Aventureiro e áreas residenciais densas; bastante usada por moradores, especialmente cedo e no fim da tarde.
+0232 - Aventureiro Circular: Circular interna do bairro Aventureiro, cobrindo ruas residenciais e retornando ao eixo principal; boa para conexões locais e intervalos moderados. Sai do Terminal Iririú.
+0234 - Cubatão: Atende região do Cubatão saindo do Terminal Iririú, servindo áreas afastadas e corredores residenciais; costuma ter menos frequência que linhas centrais.
+0238 - Aventureiro Cohab via Emilio Landmann: Interliga Aventureiro e Cohab passando pela Emílio Landmann, cobrindo vários bairros numa só rota; indicada para deslocamentos sem precisar trocar de terminal. Sai do Terminal Iririú.
+0240 - Aeroporto via Emilio Landmann: Conecta o terminal Iririú ao Aeroporto Lauro Carneiro de Loyola passando pela Emílio Landmann; útil para trabalhadores e viagens, com grade mais específica. 
 0241 - Centro/Campus: Sai do Centro para o Campus universitário, opção clássica para estudantes e servidores; maior demanda manhã, meio-dia e noite.
 0242 - Costa e Silva/Centro: Liga bairro Costa e Silva ao Centro, passando por eixo comercial e zonas residenciais; geralmente boa frequência em horários comerciais.
 0300 - Itaum/Centro: Atende o bairro Itaum até o Centro, servindo moradores da zona sul/oeste; linha tradicional com reforço nos horários de trabalho.
@@ -23,5 +22,3 @@ Fui instruído a não citar mais de uma linha por resposta a não ser que o usu�
 0700 - Sul/Centro: Linha troncal entre Terminal Sul e Centro, essencial para integração da zona sul; frequência normalmente alta e operação extensa.
 0800 - Iririú/Centro: Faz a ligação direta entre Iririú e Centro, atendendo uma das regiões mais populosas; costuma ser bastante movimentada durante todo o dia.
 2010 - Circular Centro: Circular que roda pela área central conectando comércio, serviços e pontos estratégicos sem necessidade de terminal; ideal para deslocamentos curtos no Centro.
-[2026-05-21 13:33] MEMÓRIA: A linha 0800 Iririú/Centro é a ligação direta mais indicada entre Iririú e Centro
-[2026-05-21 16:01] MEMÓRIA: A linha 0136 Norte/Iririú conecta diretamente o bairro Iririú ao Terminal Norte
