@@ -12,7 +12,7 @@ import os
 import datetime
 
 # Configuração da API
-API_KEY = "AIzaSyDo8xzOYQ5dlXQRtK_t_IW6UmbzCKmggIs"
+API_KEY = "SUA CHAVE AQUI"
 KNOWLEDGE_FILE = "knowledge.txt"
 AUDIO_FILE = "entrada.wav"
 
