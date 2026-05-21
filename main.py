@@ -119,7 +119,7 @@ def gravar_audio() -> None:
 
     global _gravando
 
-    adicionar_mensagem_sistema("🎤 Gravando... clique novamente para parar.")
+    adicionar_mensagem_sistema("Gravando... clique novamente para parar.")
 
     audio_frames = []
 
@@ -160,7 +160,7 @@ def reconhecer_audio() -> str | None:
     except sr.UnknownValueError:
         return None
     except sr.RequestError as e:
-        adicionar_mensagem_sistema(f"⚠️ Erro no serviço de voz: {e}")
+        adicionar_mensagem_sistema(f"Erro no serviço de voz: {e}")
         return None
 
 
@@ -211,7 +211,7 @@ def iniciar_voz() -> None:
         _gravando = False
 
         btn_voz.configure(
-            text="⏳ Processando...",
+            text="Processando...",
             bg="#444444",
             state="disabled"
         )
@@ -222,7 +222,7 @@ def iniciar_voz() -> None:
     _gravando = True
 
     btn_voz.configure(
-        text="⏹ Parar Gravação",
+        text="Parar Gravação",
         bg="#CC3333"
     )
 
@@ -233,7 +233,7 @@ def _processar_voz() -> None:
     global _gravando
     try:
         gravar_audio()
-        adicionar_mensagem_sistema("🔍 Reconhecendo fala…")
+        adicionar_mensagem_sistema("Reconhecendo fala…")
 
         pergunta = reconhecer_audio()
 
@@ -251,7 +251,7 @@ def _processar_voz() -> None:
         0,
         lambda: btn_voz.configure(
             state="normal",
-            text="🎤 Perguntar por Voz",
+            text="Perguntar por Voz",
             bg=COR_BTN_VOZ
         )
     )
@@ -271,13 +271,13 @@ def enviar_texto(event=None) -> None:
 # Núcleo compartilhado
 
 def _buscar_e_responder(pergunta: str) -> None:
-    adicionar_mensagem_sistema("⏳ Consultando MoveBus…")
+    adicionar_mensagem_sistema("Consultando MoveBus…")
     try:
         resposta = responder_ia(pergunta)
         exibir_mensagem("MoveBus", resposta)
         falar(resposta)
     except Exception as e:
-        adicionar_mensagem_sistema(f"❌ Erro ao consultar IA: {e}")
+        adicionar_mensagem_sistema(f"Erro ao consultar IA: {e}")
 
 
 # CONSTRUÇÃO DA JANELA
@@ -358,7 +358,7 @@ entrada.bind("<Return>", enviar_texto)          # Enter envia mensagem
 
 btn_enviar = tk.Button(
     frame_entrada,
-    text="Enviar ➤",
+    text="Enviar",
     font=("Segoe UI", 11, "bold"),
     bg=COR_BTN_ENV,
     fg="white",
@@ -374,7 +374,7 @@ btn_enviar.pack(side="left", padx=(8, 0))
 # Botão de voz
 btn_voz = tk.Button(
     janela,
-    text="🎤 Perguntar por Voz",
+    text="Perguntar por Voz",
     font=("Segoe UI", 13, "bold"),
     bg=COR_BTN_VOZ,
     fg="white",
